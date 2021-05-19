@@ -1,0 +1,708 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+.header {
+  &__top {
+    padding: 36px 0 35px;
+  }
+  &__top-items {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__top-item {
+    display: flex;
+    align-items: center;
+  }
+  &__top-item + .header__top-item {
+    margin-left: 60px;
+  }
+  &__top-link {
+    display: flex;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.08em;
+    color: #262626;
+    text-transform: uppercase;
+    @extend %GothamPro-400;
+  }
+  &__top-link img {
+    margin-right: 8px;
+  }
+  &__span {
+    margin: 0 5px;
+  }
+  &__content {
+    background-color: #fff;
+  }
+  &__content {
+    padding: 32px 26px 15px 24px;
+  }
+  &__inner-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #e9e9e9;
+    align-items: center;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.08em;
+    color: #dfa94a;
+    @extend %GothamPro-400;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: #dfa94a;
+      top: 17px;
+      left: 13px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: #dfa94a;
+      bottom: 17px;
+      left: 13px;
+    }
+  }
+  &__btn img {
+    margin-right: 14px;
+  }
+  &__cart {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.08em;
+    color: #262626;
+    @extend %GothamPro-400;
+  }
+  &__cart-link {
+    display: flex;
+    align-items: center;
+  }
+  &__cart-link span {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #e9e9e9;
+    margin: 0 11px 0 15px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: #a86d06;
+      right: -4px;
+      top: -6px;
+    }
+  }
+  &__cart-link span img {
+    margin: 8px auto;
+  }
+  &__nav {
+    padding: 12px 0 11px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  &__nav-items {
+    display: flex;
+    justify-content: center;
+  }
+  &__nav-item + .header__nav-item {
+    margin-left: 20px;
+  }
+  &__nav-link {
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.08em;
+    color: #262626;
+    text-transform: uppercase;
+    @extend %GothamPro-Bold-700;
+  }
+  &__top-btn {
+    display: none;
+  }
+  &__top-logo {
+    display: none;
+  }
+  &__top-map {
+    display: none;
+  }
+}
+//.slider-wrap{
+//  &__inner{
+//
+//  }
+//}
+.slider-inner {
+  &__wrapper {
+    background-color: #fff;
+    padding: 15px 25px 30px 26px;
+  }
+  &__box {
+    background: #efefef;
+  }
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 172px 214px 36px 161px;
+  }
+  &__text {
+    @extend %GothamPro-Bold-700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: rgba(38, 38, 38, 0.5);
+    margin-bottom: 15px;
+  }
+  &__title {
+    max-width: 449px;
+    @extend %GothamPro-Bold-700;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    color: #262626;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    @extend %PTSans-Regular-400;
+    max-width: 400px;
+    letter-spacing: 0.02em;
+    color: #262626;
+    margin-bottom: 30px;
+  }
+  &__link {
+    max-width: 152px;
+    display: flex;
+    @extend %GothamPro-Bold-700;
+    border: 1px solid #7a7a7a;
+    padding: 8px 30px 6px 21px;
+    font-size: 13px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #262626;
+  }
+  &__link img {
+    margin-right: 10px;
+    color: #7a7a7a;
+  }
+}
+.slick-initialized .slick-slide {
+  display: flex;
+}
+.slick-prev,
+.slick-next {
+  border: none;
+  padding: 0px;
+  font-size: 0px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(38, 38, 38, 0.3);
+}
+.slick-prev {
+  position: absolute;
+  top: 430px;
+  left: 24px;
+  background-image: url("../images/slider/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slick-next {
+  position: absolute;
+  right: 25px;
+  top: 430px;
+  background-image: url("../images/slider/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+}
+.slick-dots button {
+  padding: 0;
+  border: 0px;
+  font-size: 0px;
+  background-color: #a86d06;
+  width: 38px;
+  height: 2px;
+  background: rgba(34, 29, 29, 0.3);
+  margin-right: 10px;
+  transition: all 0.6s;
+}
+.slick-active > button {
+  background-color: rgb(0, 0, 0);
+}
+.about {
+  &__inner {
+    background-color: #fff;
+    padding: 0 25px 30px 26px;
+  }
+  &__box {
+    background-image: url("../images/about/bg.png");
+    filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.25));
+    padding: 91px 387px 131px 386px;
+  }
+  &__card {
+    text-align: center;
+  }
+  &__card-link img {
+    margin: 0 auto 22px;
+  }
+  &__card-title {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 414px;
+    @extend %GothamPro-Bold-700;
+    font-size: 38px;
+    line-height: 48px;
+    letter-spacing: 0.03em;
+    color: #262626;
+  }
+  &__card-description {
+    max-width: 669px;
+    letter-spacing: 0.02em;
+  }
+  &__inner .slick-initialized .slick-slide {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.collection {
+  &__inner {
+    background-color: #fff;
+    padding: 0 25px;
+  }
+  &__wrapper {
+    background: #f9f9f9;
+    padding: 100px 25px 102px 25px;
+  }
+  &__span {
+    font-family: Amsterdam Deco One;
+    font-size: 48px;
+    font-style: normal;
+    display: block;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #a86d06;
+  }
+  &__title {
+    @extend %GothamPro-Bold-700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 58px;
+  }
+  &__wrap {
+    display: grid;
+    min-height: 1321px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 2fr);
+    position: relative;
+  }
+  &__card-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  &__card-span:nth-child(3) {
+    @extend %PTSans-Regular-400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+  &__card-span:nth-child(2){
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: inherit;
+    position: relative;
+  }
+  &__card-span:nth-child(2) img{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+  }
+  &__card-span:last-child {
+    @extend %PTSans-Regular-400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+  &__card-span:nth-child(2) {
+    direction: rtl;
+  }
+  &__card-span:nth-child(3) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  &__card-span:nth-child(4) {
+    display: flex;
+    flex-direction: column-reverse;
+    direction: rtl;
+  }
+  &__card:nth-child(1) {
+    max-height: 648px;
+    padding: 33px 50px 37px 40px;
+  }
+  &__card:nth-child(2) {
+    max-height: 322px;
+    padding: 33px 50px 37px 40px;
+  }
+  &__card:nth-child(3) {
+    max-height: 315px;
+    padding: 33px 50px 37px 40px;
+  }
+  &__card:nth-child(4) {
+    max-height: 311px;
+    padding: 33px 50px 37px 40px;
+  }
+  &__card:nth-child(5) {
+    max-width: 687px;
+    max-height: 312px;
+    padding: 33px 50px 37px 40px;
+  }
+  &__card:nth-child(6) {
+    max-width: 699px;
+    max-height: 648px;
+    max-width: 703px;
+    padding: 33px 50px 37px 40px;
+  }
+  &__card-span {
+    width: 50%;
+  }
+  &__card-span {
+    width: 50%;
+    @extend %GothamPro-Bold-700;
+    font-size: 24px;
+    line-height: 38px;
+    /* identical to box height, or 158% */
+
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+  }
+  &__card:nth-child(1) {
+    grid-row: span 2;
+  }
+  &__card:nth-child(2) {
+    grid-row: span;
+  }
+  &__card:nth-child(3) {
+    grid-row: span;
+  }
+  &__card:nth-child(4) {
+    grid-row: span;
+  }
+  &__card:nth-child(5) {
+    grid-column: span 2;
+  }
+  &__card:nth-child(6) {
+    grid-column: 2;
+    position: absolute;
+    bottom: 12px;
+    max-height: 648px;
+  }
+}
+.email {
+  &__inner {
+    background-color: #fff;
+    padding: 22px 25px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: #f2eadb;
+    padding: 0 162px 0 77px;
+  }
+  &__content {
+    padding-top: 100px;
+  }
+  &__span {
+    @extend %GothamPro-Bold-700;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: rgba(38, 38, 38, 0.5);
+    margin-bottom: 19px;
+  }
+  &__title {
+    max-width: 551px;
+    @extend %GothamPro-Bold-700;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.03em;
+    margin-bottom: 19px;
+  }
+  &__subtitle {
+    max-width: 351px;
+    @extend %PTSans-Regular-400;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+  }
+  &__form {
+    display: flex;
+  }
+  &__form input[type="email"] {
+    max-width: 365px;
+    padding: 5px 5px 8px 5px;
+    margin-right: 15px;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+  }
+  &__form input[type="email"]::placeholder {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: rgba(122, 122, 122, 0.5);
+  }
+  &__link {
+    display: flex;
+    @extend %GothamPro-Bold-700;
+    padding: 8px 28px 8px 21px;
+    font-size: 13px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: #262626;
+    border: 1px solid #7a7a7a;
+  }
+  &__link img {
+    margin-right: 10px;
+  }
+}
+.about-sapfir {
+  &__inner {
+    background-color: #fff;
+    padding: 0 25px 30px 26px;
+  }
+  &__wrapper {
+    background-image: url("../images/about-sapfir/bg.png");
+    padding: 100px 0px 99px;
+  }
+  //&__item{
+  //  display: block;
+  //  margin: 0 auto;
+  //}
+  &__link {
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    @extend %GothamPro-Bold-700;
+    font-size: 38px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 63px;
+  }
+  &__text,
+  &__description {
+    @extend %PTSans-Regular-400;
+    display: block;
+    margin: 0 auto;
+    max-width: 676px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  &__text {
+    margin-bottom: 35px;
+  }
+}
+.slick-initialized .slick-slide {
+  display: flex;
+  flex-direction: column;
+}
+.jurnal {
+  &__inner {
+    background-color: #fff;
+    padding: 0 25px 19px;
+  }
+  &__wrapper {
+    background: #f9f9f9;
+    padding-bottom: 100px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 41px;
+  }
+  &__item {
+    max-width: 451px;
+  }
+  &__content {
+    padding: 27px 40px 40px;
+    background: #ffffff;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.07);
+    &-span {
+      display: block;
+      @extend %GothamPro-400;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #a86d06;
+    }
+    &-data {
+      display: block;
+      @extend %GothamPro-400;
+      font-size: 13px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: #7a7a7a;
+      margin-bottom: 15px;
+    }
+    &-title {
+      @extend %GothamPro-Bold-700;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0.02em;
+      margin-bottom: 25px;
+    }
+    &-description {
+      @extend %PTSans-Regular-400;
+      letter-spacing: 0.02em;
+      margin-bottom: 15px;
+    }
+    &-link {
+      @extend %GothamPro-Bold-700;
+      letter-spacing: 0.02em;
+      color: #a86d06;
+    }
+  }
+  &__link {
+    display: block;
+    margin: 0 auto;
+    width: 192px;
+    @extend %GothamPro-Bold-700;
+    background: #a86d06;
+    border: 1px solid #a86d06;
+    padding: 11px 56px 9px;
+    font-size: 13px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+}
+.footer {
+  background: #e5e5e5;
+  &__inner {
+    background: #f9f9f9;
+    padding: 38px 0 208px;
+  }
+  &__top {
+    background: #f9f9f9;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+  }
+  &__social-item:nth-child(2) {
+    margin: 0 16px 0 12px;
+  }
+  &__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  &__content-items {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 187px;
+    padding-right: 252px;
+    padding-bottom: 45px;
+  }
+  &__content-item:nth-child(2) {
+    padding-top: 40px;
+  }
+  &__title {
+    @extend %GothamPro-400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+  }
+  &__nav-item {
+    margin-bottom: 15px;
+  }
+  &__content-item:nth-child(4) .footer__nav .footer__nav-item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__nav-span {
+    @extend %PTSans-Regular-400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #7a7a7a;
+  }
+  &__nav-link {
+    @extend %PTSans-Regular-400;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: #262626;
+  }
+  &__middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__middle-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__middle-link {
+    @extend %PTSans-Regular-400;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    color: #7a7a7a;
+  }
+  &__middle-item:nth-child(2) {
+    margin: 0 20px;
+  }
+  &__middle img {
+    margin-left: 430px;
+  }
+  &__bottom {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    @extend %PTSans-Regular-400;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+  }
+  &__bottom-text {
+    max-width: 533px;
+    color: #7a7a7a;
+  }
+  &__bottom-link {
+    color: rgba(122, 122, 122, 0.5);
+  }
+}
+@import "media";

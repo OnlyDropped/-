@@ -1,0 +1,21 @@
+html,
+body {
+  height: 100%;
+  margin: 0px;
+}
+body {
+  color: $default;
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  flex-direction: column;
+  background-color: #E5E5E5;
+}
+.main {
+  flex-grow: 1;
+}
+.container {
+  max-width: 1530px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
